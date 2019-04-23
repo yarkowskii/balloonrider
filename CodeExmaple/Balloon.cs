@@ -5,21 +5,21 @@ using Random = UnityEngine.Random;
 
 public class Balloon : MonoBehaviour
 {   
-	public StatisticsData sData;
+    public StatisticsData sData;
 
-	public static Balloon instance;
+    public static Balloon instance;
 
     private Rigidbody2D rb2d;
 
     //MISSES
-	public GameObject missIndicator;
-	public short nearBombs;
-	public GameObject lastNearBomb;
+    public GameObject missIndicator;
+    public short nearBombs;
+    public GameObject lastNearBomb;
     public GameObject lastNearRocket;
     public GameObject currentBomb;
-	public int coefNearBomb = 1;
+    public int coefNearBomb = 1;
 
-	public bool nearBomb;
+    public bool nearBomb;
     public bool nearRocket;
 
     //ITEMS
@@ -44,7 +44,7 @@ public class Balloon : MonoBehaviour
 
     void Awake()
     {
-		if (instance == null)
+	if (instance == null)
         {
             instance = this;
         }
@@ -61,7 +61,7 @@ public class Balloon : MonoBehaviour
 
     void Update(){
         itemsBalloon.transform.position = GameController.instance.gameBalloon.transform.position;
-	}
+    }
 
     void OnTriggerEnter2D(Collider2D collider2d)
     {
